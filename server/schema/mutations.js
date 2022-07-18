@@ -5,7 +5,16 @@ const { GraphQLObjectType, GraphQLString } = graphql;
 
 const mutation = new GraphQLObjectType({
   name: "Mutation",
-  fields: {},
+  fields: {
+    type: UserType,
+    args: {
+      email: { type: GraphQLString },
+      password: { type: GraphQLString },
+    },
+    resolve(parentValue, args, request) {
+      return 
+    },
+  },
 });
 
 module.exports = mutation;
